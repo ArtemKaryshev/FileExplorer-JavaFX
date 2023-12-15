@@ -1,7 +1,8 @@
 Manifest-Version: 1.0
 Main-Class: artem.maven.FileExplorer
-Class-Path: javafx-fxml-17.0.8.jar javafx-graphics-17.0.8-win.jar javafx
- -controls-17.0.8.jar javafx-controls-17.0.8-win.jar javafx-base-17.0.8-
- win.jar javafx-graphics-17.0.8.jar javafx-fxml-17.0.8-win.jar javafx-ba
- se-17.0.8.jar
+Class-Path: javafx-graphics-17.0.8.jar javafx-fxml-17.0.8-win.jar javafx
+ -controls-17.0.8.jar javafx-graphics-17.0.8-win.jar jfx-testrunner-1.2.
+ jar javafx-controls-17.0.8-win.jar log4j-core-2.17.1.jar javafx-fxml-17
+ .0.8.jar hamcrest-core-1.3.jar javafx-base-17.0.8-win.jar junit-4.11.ja
+ r log4j-api-2.17.1.jar javafx-base-17.0.8.jar
 

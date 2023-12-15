@@ -20,7 +20,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 
 /**
- * Главный класс приложения FileExplorer, представляющий интерфейс для работы с файлами и директориями.
+ * The main class of the FileExplorer application, representing the interface for working with files and directories.
  */
 public class FileExplorer extends Application {
     private static final Logger logger = LogManager.getLogger(FileExplorer.class);
@@ -28,19 +28,19 @@ public class FileExplorer extends Application {
     private Functions functions = new Functions();
 
     /**
-     * Метод запускающий приложение.
+     * The method launching the application.
      *
-     * @param args аргументы командной строки
+     * @param args command line arguments
      */
     public static void main(String[] args) {
         launch(args);
-        logger.debug("Приложение успешно завершило свою работу \n");
+        logger.debug("The application has successfully finished its work \n");
     }
 
     /**
-     * Метод позволяющий запустить приложение, использует JavaFX.
+     * A method allowing to launch the application, using JavaFX.
      *
-     * @param primaryStage окно
+     * @param primaryStage the window
      */
     @Override
     public void start(Stage primaryStage) {
@@ -100,9 +100,9 @@ public class FileExplorer extends Application {
                 }
             });
 
-            Button CalcFolderSize = new Button("Show Folder Size");
-            CalcFolderSize.setPrefWidth(130);
-            CalcFolderSize.setOnAction(e -> {
+            Button calcFolderSize = new Button("Show Folder Size");
+            calcFolderSize.setPrefWidth(130);
+            calcFolderSize.setOnAction(e -> {
                 try {
                     functions.calcSizeFunc(functions.currentDirectoryPath, title);
                 } catch (Exception ex) {
@@ -118,7 +118,7 @@ public class FileExplorer extends Application {
 
             VBox vbox = new VBox();
             HBox hBox = new HBox();
-            hBox.getChildren().addAll(backButton, spacer1, selectDriveButton, spacer2, CalcFolderSize);
+            hBox.getChildren().addAll(backButton, spacer1, selectDriveButton, spacer2, calcFolderSize);
             vbox.getChildren().addAll(functions.table, hBox, title);
 
             Scene scene = new Scene(vbox, 770, 451);
@@ -126,10 +126,10 @@ public class FileExplorer extends Application {
             primaryStage.setResizable(false);
             primaryStage.show();
 
-            logger.debug("Приложение успешно запущено");
+            logger.debug("The application has been launched successfully");
 
         } catch (Exception ex) {
-            logger.error("Ошибка при запуске приложения", ex);
+            logger.error("Error launching the application", ex);
         }
     }
 }

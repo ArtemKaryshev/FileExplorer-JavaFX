@@ -1,5 +1,7 @@
 package artem.maven;
-
+/**
+ * The class - constructor, that contains getters.
+ */
 public class FileItem {
     private final String name;
     private final String type;
